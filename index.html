@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <title>Assignment 4</title>
+    <style>
+        .btn {
+        display: block;
+        margin: auto;
+        height: 50px;
+        width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="btn">Click</button>
+
+</body>
+<script>
+    let count = 0;
+    let flag = true;
+    $(function () {
+        $('.btn').click(function () {
+            count++;
+            if (count == 3 && flag) {
+                alert('Hello World');   //alert will be displayed after clicking the button 3 times
+                flag = false;
+            }
+            else if (!flag) {
+                alert('Hello World');   // from the 4th time alert will be displayed as usual
+            }
+        })
+    });
+</script>
+
+</html>
